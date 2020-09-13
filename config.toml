@@ -31,8 +31,8 @@ summaryLength = 30
   # enable_anchor_link = true
 
   [params.homepage_meta_tags]
-    meta_description = "Hugo Whisper is a documentation theme built with Hugo."
-    meta_og_title = "Hugo Whisper Theme"
+    meta_description = "Togglee is a feature toggle serverless library"
+    meta_og_title = "Togglee"
     meta_og_type = "website"
     meta_og_url = "https://togglee.com"
     meta_og_image = ""
@@ -42,5 +42,5 @@ summaryLength = 30
     meta_twitter_creator = "@kanekotic"
 
   [params.logo]
-      mobile = "/images/logo-2.png"
-      standard  = "/images/logo-2.png"
+      mobile = "/images/logo-1.png"
+      standard  = "/images/logo-1.png"
