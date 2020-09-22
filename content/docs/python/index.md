@@ -6,8 +6,6 @@ weight: 3
 summary: usage of the library using python.
 ---
 
-This document 
-
 ## Install
 
 ```sh
