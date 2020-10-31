@@ -3,13 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.togglee.com/docs/javascript_typescript/</loc>
+    <loc>https://www.togglee.com/docs/</loc>
+    <lastmod>2018-11-28T15:14:39+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.togglee.com/docs/toggle_quickstart/</loc>
     <lastmod>2019-02-11T19:27:37+10:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.togglee.com/docs/</loc>
-    <lastmod>2018-11-28T15:14:39+10:00</lastmod>
+    <loc>https://www.togglee.com/docs/toggle-types/</loc>
+    <lastmod>2019-02-11T19:27:37+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.togglee.com/docs/javascript_typescript/</loc>
+    <lastmod>2019-02-11T19:27:37+10:00</lastmod>
   </url>
   
   <url>

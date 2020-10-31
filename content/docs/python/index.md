@@ -1,18 +1,18 @@
 ---
-title: 'Quick Start Python'
+title: 'Python'
 date: 2019-02-11T19:27:37+10:00
 draft: false
-weight: 3
+weight: 40
 summary: usage of the library using python.
 ---
 
-## Install
+## Installation
 
 ```sh
 pip install togglee
 ```
 
-## Use
+## Usage
 
 ```python
 from togglee import Togglee

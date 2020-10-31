@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Quick Start Javscript/Typescript - Togglee</title>
+  <title>Javscript/Typescript - Togglee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://www.togglee.com/favicon.png">
@@ -90,12 +90,20 @@
   <h4>Docs</h4>
   <ul>
     
-    <li class="active ">
-      <a href="https://www.togglee.com/docs/javascript_typescript/">Quick Start Javscript/Typescript</a>
+    <li class="">
+      <a href="https://www.togglee.com/docs/toggle_quickstart/">Quick Start</a>
     </li>
     
     <li class="">
-      <a href="https://www.togglee.com/docs/python/">Quick Start Python</a>
+      <a href="https://www.togglee.com/docs/toggle-types/">Type of Toggles</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://www.togglee.com/docs/javascript_typescript/">Javscript/Typescript</a>
+    </li>
+    
+    <li class="">
+      <a href="https://www.togglee.com/docs/python/">Python</a>
     </li>
     
   </ul>
@@ -105,7 +113,7 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Quick Start Javscript/Typescript</h1>
+<h1 class="title">Javscript/Typescript</h1>
 <div class="content ">
   <h2 id="installation">Installation</h2>
 <p>add it to your project using <code>npm install togglee --save</code> or <code>yarn add togglee</code></p>
@@ -154,35 +162,7 @@
             
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;-----------&#34;</span><span class="p">)</span>
     <span class="p">},</span> <span class="mi">10000</span><span class="p">);</span>
-</code></pre></div><h2 id="type-of-toggles">Type of toggles</h2>
-<h3 id="release">Release</h3>
-<p>Simple true/false logical path definition.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;release&#39;</span><span class="p">,</span>
-    <span class="nx">value</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="context">Context</h3>
-<p>Allows complex logic to decide the outcome of the logical path (example traffic, users, resources available).</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
-    <span class="s2">&#34;type&#34;</span><span class="o">:</span> <span class="s2">&#34;context&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;conditions&#34;</span><span class="o">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">&#34;field&#34;</span><span class="o">:</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span>
-            <span class="s2">&#34;value&#34;</span><span class="o">:</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span>
-            <span class="s2">&#34;operation&#34;</span><span class="o">:</span> <span class="s2">&#34;eq&#34;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div><p>available operations are:</p>
-<ul>
-<li>&lsquo;eq&rsquo;: equal (===)</li>
-<li>&lsquo;ne&rsquo;: not equal (!==)</li>
-<li>&lsquo;gt&rsquo;: greater than (&gt;)</li>
-<li>&lsquo;ge&rsquo;: greater equal (&gt;=)</li>
-<li>&lsquo;lt&rsquo;: lesser than (&lt;)</li>
-<li>&lsquo;le&rsquo;: lesser qqual (&lt;=)</li>
-</ul>
-
+</code></pre></div>
 </div>
 </div>
 
@@ -197,9 +177,6 @@
     <div class="row">
       <div class="col-12">
         <div class="sub-footer-inner">
-          <ul>
-
-          </ul>
         </div>
       </div>
     </div>

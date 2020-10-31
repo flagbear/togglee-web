@@ -24,7 +24,7 @@ summaryLength = 30
   google_analytics_id=""
   homepage_button_link = '/docs'
   homepage_button_text = 'Get Started'
-  homepage_intro = 'Togglee is a feature toggle serverless simple to use library for multiple programming languages.'
+  homepage_intro = 'Togglee is a feature toggle library for multiple programming languages that does not require any server to update your toggles'
   homepage_image = ''
 
   ## You can enable to add anchor links to header elements
@@ -36,7 +36,7 @@ summaryLength = 30
     meta_og_type = "website"
     meta_og_url = "https://togglee.com"
     meta_og_image = ""
-    meta_og_description = "Togglee is a feature toggle serverless simple to use library for multiple programming languages."
+    meta_og_description = "Togglee is a feature toggle library for multiple programming languages that does not require any server to update your toggles"
     meta_twitter_card = "summary"
     meta_twitter_site = "@togglee"
     meta_twitter_creator = "@kanekotic"

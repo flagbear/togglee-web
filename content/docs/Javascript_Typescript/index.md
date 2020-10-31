@@ -1,8 +1,8 @@
 ---
-title: 'Quick Start Javscript/Typescript'
+title: 'Javscript/Typescript'
 date: 2019-02-11T19:27:37+10:00
 draft: false
-weight: 1
+weight: 30
 summary: usage of the library using javscript/typescript.
 ---
 
@@ -11,8 +11,6 @@ summary: usage of the library using javscript/typescript.
 add it to your project using `npm install togglee --save` or `yarn add togglee`
 
 ## Usage
-
-
 
 ```js
     import pkg from 'togglee';
@@ -60,38 +58,3 @@ add it to your project using `npm install togglee --save` or `yarn add togglee`
         console.log("-----------")
     }, 10000);
 ```
-
-## Type of toggles
-
-### Release
-
-Simple true/false logical path definition.
-```js
-{
-    type: 'release',
-    value: true,
-}
-```
-### Context
-
-Allows complex logic to decide the outcome of the logical path (example traffic, users, resources available). 
-```js
-{
-    "type": "context",
-    "conditions": [
-        {
-            "field": "username",
-            "value": "user1",
-            "operation": "eq"
-        }
-    ]
-}
-```
-available operations are:
-* 'eq': equal (===)
-* 'ne': not equal (!==)
-* 'gt': greater than (>)
-* 'ge': greater equal (>=)
-* 'lt': lesser than (<)
-* 'le': lesser qqual (<=)
-
