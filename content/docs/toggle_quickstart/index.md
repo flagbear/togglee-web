@@ -34,13 +34,13 @@ An example implementation using js for the previous toggle is:
     const {Togglee} = pkg;
 
     const url = "https://gist.githubusercontent.com/kanekotic/c469f99bef5a5c0634b4a94a4acd6546/raw/toggles"
-    const refresh_rate_seconds = 5
-    const default_values = []
-    const subject = new Togglee(url, refresh_rate_seconds, [default_values])
+    const refreshRateSeconds = 5
+    const defaultValues = []
+    const subject = new Togglee(url, refreshRateSeconds, defaultValues)
 
 
     setInterval(() => {
-        if (subject.isEnabled("prop"))
+        if (subject.isEnabled("myToggle"))
             console.log("do stuff")
         else
             console.log("dont do stuff")

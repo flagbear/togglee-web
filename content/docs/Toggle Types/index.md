@@ -11,7 +11,7 @@ summary: The different set of toggles that the library supports.
 Simple true/false logical path definition.
 ```js
 {
-    "typ": "release",
+    "type": "release",
     "name": "awesomeToggle",
     "value": true
 }

@@ -118,50 +118,52 @@
   <h2 id="installation">Installation</h2>
 <p>add it to your project using <code>npm install togglee --save</code> or <code>yarn add togglee</code></p>
 <h2 id="usage">Usage</h2>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js">    <span class="kr">import</span> <span class="nx">pkg</span> <span class="nx">from</span> <span class="s1">&#39;togglee&#39;</span><span class="p">;</span>
-    <span class="kr">const</span> <span class="p">{</span><span class="nx">Togglee</span><span class="p">}</span> <span class="o">=</span> <span class="nx">pkg</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="p">{</span> <span class="nx">Togglee</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;togglee&#34;</span><span class="p">)</span>
 
-    <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&#34;https://gist.githubusercontent.com/kanekotic/c469f99bef5a5c0634b4a94a4acd6546/raw/toggles&#34;</span>
-    <span class="kr">const</span> <span class="nx">refresh_rate_seconds</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="kr">const</span> <span class="nx">default_values</span> <span class="o">=</span> <span class="p">[</span>
+<span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&#34;https://gist.githubusercontent.com/kanekotic/c469f99bef5a5c0634b4a94a4acd6546/raw/toggles&#34;</span>
+<span class="kr">const</span> <span class="nx">refreshRateSeconds</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="kr">const</span> <span class="nx">defaultValues</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;release&#34;</span><span class="p">,</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;prop&#34;</span><span class="p">,</span>
+      <span class="nx">value</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;release&#34;</span><span class="p">,</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;prop2&#34;</span><span class="p">,</span>
+      <span class="nx">value</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;context&#34;</span><span class="p">,</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;prop3&#34;</span><span class="p">,</span>
+      <span class="nx">conditions</span><span class="o">:</span> <span class="p">[</span>
         <span class="p">{</span>
-        <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;release&#39;</span><span class="p">,</span>
-        <span class="nx">value</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-        <span class="s2">&#34;type&#34;</span><span class="o">:</span> <span class="s2">&#34;release&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;value&#34;</span><span class="o">:</span> <span class="kc">true</span>
-        <span class="p">},</span>
-        <span class="p">{</span>
-        <span class="s2">&#34;type&#34;</span><span class="o">:</span> <span class="s2">&#34;context&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;conditions&#34;</span><span class="o">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-            <span class="s2">&#34;field&#34;</span><span class="o">:</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span>
-            <span class="s2">&#34;value&#34;</span><span class="o">:</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span>
-            <span class="s2">&#34;operation&#34;</span><span class="o">:</span> <span class="s2">&#34;eq&#34;</span>
-            <span class="p">}</span>
-        <span class="p">]</span>
+          <span class="nx">field</span><span class="o">:</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span>
+          <span class="nx">value</span><span class="o">:</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span>
+          <span class="nx">operation</span><span class="o">:</span> <span class="s2">&#34;eq&#34;</span>
         <span class="p">}</span>
-    <span class="p">]</span>
-    <span class="kr">const</span> <span class="nx">subject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Togglee</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">refresh_rate_seconds</span><span class="p">,</span> <span class="nx">default_values</span><span class="p">)</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">]</span>
 
+<span class="kr">const</span> <span class="nx">subject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Togglee</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">refreshRateSeconds</span><span class="p">,</span> <span class="nx">defaultValues</span><span class="p">)</span>
 
-    <span class="nx">setInterval</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">subject</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="s2">&#34;prop&#34;</span><span class="p">))</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;do stuff&#34;</span><span class="p">)</span>
-        <span class="k">else</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;dont do stuff&#34;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">subject</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="s2">&#34;prop3&#34;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&#34;username&#34;</span><span class="o">:</span> <span class="s2">&#34;user1&#34;</span><span class="p">}))</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;do stuff for user 1&#34;</span><span class="p">)</span>
-        <span class="k">else</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;dont do stuff for user 1&#34;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">subject</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="s2">&#34;prop3&#34;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&#34;username&#34;</span><span class="o">:</span> <span class="s2">&#34;user2&#34;</span><span class="p">}))</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;do stuff for user 2&#34;</span><span class="p">)</span>
-        <span class="k">else</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;dont do stuff for user 2&#34;</span><span class="p">)</span>
-            
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;-----------&#34;</span><span class="p">)</span>
-    <span class="p">},</span> <span class="mi">10000</span><span class="p">);</span>
+<span class="nx">setInterval</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">subject</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="s2">&#34;prop&#34;</span><span class="p">))</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;do stuff&#34;</span><span class="p">)</span>
+    <span class="k">else</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;dont do stuff&#34;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">subject</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="s2">&#34;prop3&#34;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&#34;username&#34;</span><span class="o">:</span> <span class="s2">&#34;user1&#34;</span><span class="p">}))</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;do stuff for user 1&#34;</span><span class="p">)</span>
+    <span class="k">else</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;dont do stuff for user 1&#34;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">subject</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="s2">&#34;prop3&#34;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&#34;username&#34;</span><span class="o">:</span> <span class="s2">&#34;user2&#34;</span><span class="p">}))</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;do stuff for user 2&#34;</span><span class="p">)</span>
+    <span class="k">else</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;dont do stuff for user 2&#34;</span><span class="p">)</span>
+        
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;-----------&#34;</span><span class="p">)</span>
+<span class="p">},</span> <span class="mi">10000</span><span class="p">);</span>
 </code></pre></div>
 </div>
 </div>

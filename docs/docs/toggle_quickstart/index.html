@@ -137,13 +137,13 @@ Simple true/false logical path definition.</p>
     <span class="kr">const</span> <span class="p">{</span><span class="nx">Togglee</span><span class="p">}</span> <span class="o">=</span> <span class="nx">pkg</span><span class="p">;</span>
 
     <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&#34;https://gist.githubusercontent.com/kanekotic/c469f99bef5a5c0634b4a94a4acd6546/raw/toggles&#34;</span>
-    <span class="kr">const</span> <span class="nx">refresh_rate_seconds</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="kr">const</span> <span class="nx">default_values</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="kr">const</span> <span class="nx">subject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Togglee</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">refresh_rate_seconds</span><span class="p">,</span> <span class="p">[</span><span class="nx">default_values</span><span class="p">])</span>
+    <span class="kr">const</span> <span class="nx">refreshRateSeconds</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="kr">const</span> <span class="nx">defaultValues</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="kr">const</span> <span class="nx">subject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Togglee</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">refreshRateSeconds</span><span class="p">,</span> <span class="nx">defaultValues</span><span class="p">)</span>
 
 
     <span class="nx">setInterval</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">subject</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="s2">&#34;prop&#34;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">subject</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="s2">&#34;myToggle&#34;</span><span class="p">))</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;do stuff&#34;</span><span class="p">)</span>
         <span class="k">else</span>
             <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;dont do stuff&#34;</span><span class="p">)</span>
