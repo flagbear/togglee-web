@@ -11,8 +11,9 @@ summary: The different set of toggles that the library supports.
 Simple true/false logical path definition.
 ```js
 {
-    type: 'release',
-    value: true,
+    "typ": "release",
+    "name": "awesomeToggle",
+    "value": true
 }
 ```
 ### Context
@@ -21,6 +22,7 @@ Allows complex logic to decide the outcome of the logical path (example traffic,
 ```js
 {
     "type": "context",
+    "name": 'awesomeToggle'
     "conditions": [
         {
             "field": "username",
