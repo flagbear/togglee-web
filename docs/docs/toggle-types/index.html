@@ -118,13 +118,15 @@
   <h3 id="release">Release</h3>
 <p>Simple true/false logical path definition.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;release&#39;</span><span class="p">,</span>
-    <span class="nx">value</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&#34;typ&#34;</span><span class="o">:</span> <span class="s2">&#34;release&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;name&#34;</span><span class="o">:</span> <span class="s2">&#34;awesomeToggle&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;value&#34;</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="context">Context</h3>
 <p>Allows complex logic to decide the outcome of the logical path (example traffic, users, resources available).</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
     <span class="s2">&#34;type&#34;</span><span class="o">:</span> <span class="s2">&#34;context&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;name&#34;</span><span class="o">:</span> <span class="s1">&#39;awesomeToggle&#39;</span>
     <span class="s2">&#34;conditions&#34;</span><span class="o">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="s2">&#34;field&#34;</span><span class="o">:</span> <span class="s2">&#34;username&#34;</span><span class="p">,</span>
