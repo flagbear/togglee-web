@@ -1,17 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Togglee – Toggle</title>
+    <title>Togglee</title>
     <link>https://www.togglee.com/</link>
-    <description>Recent content in Toggle on Togglee</description>
+    <description>Recent content on Togglee</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 Feb 2019 19:27:37 +1000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Nov 2018 15:14:39 +1000</lastBuildDate>
     
-	  <atom:link href="https://www.togglee.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.togglee.com/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Quick Start</title>
+      <link>https://www.togglee.com/docs/toggle_quickstart/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
       
-      
+      <guid>https://www.togglee.com/docs/toggle_quickstart/</guid>
+      <description>The fastest route to start using the library.</description>
+    </item>
     
+    <item>
+      <title>Type of Toggles</title>
+      <link>https://www.togglee.com/docs/toggle-types/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
+      
+      <guid>https://www.togglee.com/docs/toggle-types/</guid>
+      <description>The different set of toggles that the library supports.</description>
+    </item>
+    
+    <item>
+      <title>Javscript/Typescript</title>
+      <link>https://www.togglee.com/docs/javascript_typescript/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
+      
+      <guid>https://www.togglee.com/docs/javascript_typescript/</guid>
+      <description>usage of the library using javscript/typescript.</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.togglee.com/docs/python/</link>
+      <pubDate>Mon, 11 Feb 2019 19:27:37 +1000</pubDate>
+      
+      <guid>https://www.togglee.com/docs/python/</guid>
+      <description>usage of the library using python.</description>
+    </item>
     
   </channel>
 </rss>
