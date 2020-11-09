@@ -1,0 +1,24 @@
+
+---
+title: "Welcome to Togglee"
+linkTitle: "Documentation"
+menu:
+  main:
+    weight: 20
+---
+
+Welcome to the Togglee user guide! This guide shows you how to get started creating feature toggles for your application in multiple languages.
+
+## What is Togglee?
+
+Togglee is a set of libraries that enable the use of feature toggles in different development languages with one set of toggle definition. Its different to other technologies as it does not depend on a service to serve this content but actually relies in plain files server over the internet or your servers through a URL (for example gist).
+
+
+## Is Togglee for me?
+
+If you have a CI/CD environment where you expect to release changes continuesly feature toggles are a good practice to separate deployment from activation. Toggle will allow you to activate or revert changes in the speed you have configured.
+
+
+## Ready to get started?
+
+Find out how to define and use your toggles in [Getting Started](./getting-started/). Or visit the [page](https://www.togglee.com/) and [its repo](https://github.com/togglee/) and start exploring!
