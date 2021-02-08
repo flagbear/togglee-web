@@ -157,3 +157,7 @@ enable = true
 	icon = "fab fa-github"
         desc = "Development takes place here!"
 
+[[menu.main]]
+    name = "Generator"
+    weight = 10
+    url = "https://generator.togglee.com/"
