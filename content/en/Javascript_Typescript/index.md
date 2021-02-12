@@ -22,7 +22,7 @@ const defaultValues = [
     {
       type: "release",
       name: "prop",
-      value: true,
+      value: true,g
     },
     {
       type: "release",
