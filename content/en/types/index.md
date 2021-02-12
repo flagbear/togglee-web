@@ -4,6 +4,7 @@ date: 2019-02-11T19:27:37+10:00
 draft: false
 weight: 20
 description: The different set of toggles that the library supports.
+type: "docs"
 ---
 
 ### Release

@@ -2,9 +2,7 @@
 ---
 title: "Welcome to Togglee"
 linkTitle: "Documentation"
-menu:
-  main:
-    weight: 20
+type: "docs"
 ---
 
 Welcome to the Togglee user guide! This guide shows you how to get started creating feature toggles for your application in multiple languages.

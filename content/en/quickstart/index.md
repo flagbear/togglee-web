@@ -3,6 +3,7 @@ title: 'Quick Start'
 date: 2019-02-11T19:27:37+10:00
 weight: 10
 description: The fastest route to start using the library.
+type: "docs"
 ---
 
 For using togglee you will need:
