@@ -158,6 +158,14 @@ enable = true
         desc = "Development takes place here!"
 
 [[menu.main]]
-    name = "Generator"
+    name = "Home"
     weight = 10
-    url = "https://generator.togglee.com/"
+    url = "https://www.togglee.com/"
+[[menu.main]]
+    name = "Blog"
+    weight = 20
+    url = "https://www.togglee.com/blog"
+[[menu.main]]
+    name = "Documentation"
+    weight = 20
+    url = "/"
