@@ -4,7 +4,7 @@
   "description": "Hugo theme for technical documentation.",
   "main": "none.js",
   "scripts": {
-    "build": "hugo -d docs && echo docs.togglee.com >> docs/CNAME"
+    "build": "hugo -d docs && echo docs.togglee.com > docs/CNAME"
   },
   "repository": {
     "type": "git",
