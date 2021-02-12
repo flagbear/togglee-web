@@ -162,10 +162,6 @@ enable = true
     weight = 10
     url = "https://www.togglee.com/"
 [[menu.main]]
-    name = "Blog"
-    weight = 20
-    url = "https://www.togglee.com/blog"
-[[menu.main]]
     name = "Documentation"
     weight = 20
     url = "/"
