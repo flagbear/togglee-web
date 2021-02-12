@@ -1,4 +1,4 @@
-baseURL = "https://www.togglee.com/"
+baseURL = "https://docs.togglee.com/"
 title = "Togglee"
 
 enableRobotsTXT = true
