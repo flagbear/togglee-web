@@ -1,6 +1,9 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import GeneratorComponent from '@site/src/components/Generator';
+import loadable from '@loadable/component'
+
+
+const GeneratorComponent = loadable(() => import('@site/src/components/Generator'))
 
 export default function Generator() {
   return (

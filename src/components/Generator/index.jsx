@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useState } from "react"
-import { v4 as uuid } from 'uuid'
 import ReactJson from 'react-json-view'
 import Switch from "react-switch"
 
@@ -69,7 +68,7 @@ const DefaultPage = () => {
                         required>
                     {
                         TOGGLE_TYPES.map(type => 
-                            <option key={`toggleType${uuid()}`}>{type}</option>
+                            <option key={`toggleType`}>{type}</option>
                         )
                     }
                     </select>
@@ -86,7 +85,7 @@ const DefaultPage = () => {
                               required>
                           {
                               OPERATIONS_TYPES.map(type => 
-                                  <option key={`OperationType${uuid()}`}>{type}</option>
+                                  <option key={`OperationType`}>{type}</option>
                               )
                           }
                           </select>
@@ -116,5 +115,7 @@ const DefaultPage = () => {
 }
 
 export default function generator(){
-  return <DefaultPage />;
+  return (
+      <DefaultPage />
+  );
 } 
