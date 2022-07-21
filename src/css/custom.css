@@ -36,3 +36,14 @@ video {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
+input[type=text],
+input[type=text]:focus {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--ifm-color-primary-light);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 7px 15px;
+}

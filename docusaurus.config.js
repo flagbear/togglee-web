@@ -70,6 +70,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
+          {to: '/generator', label: 'Generator', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/togglee',
