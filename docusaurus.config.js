@@ -17,7 +17,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'toglee', // Usually your GitHub org/user name.
+  organizationName: 'togglee', // Usually your GitHub org/user name.
   projectName: 'togglee-web', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
