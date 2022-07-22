@@ -1,11 +1,29 @@
 import * as React from "react"
 import { useState } from "react"
-import { v4 as uuid } from 'uuid'
 import ReactJson from 'react-json-view'
 import Switch from "react-switch"
+import "./index.css";
 
 const TOGGLE_TYPES = ["release", "context"]
-const OPERATIONS_TYPES = ["eq", "ne", "gt", "ge", "lt", "le"]
+const OPERATIONS_TYPES = [{
+  name: "equal",
+  value: "eq"
+},{
+  name: "not equal",
+  value: "ne"
+},{
+  name: "bigger",
+  value: "gt"
+},{
+  name: "bigger equal",
+  value: "ge"
+},{
+  name: "lower",
+  value: "lt"
+},{
+  name: "lower equal",
+  value: "le"
+}]
 
 const DefaultPage = () => {
   const [data,setData] = useState({
@@ -36,15 +54,27 @@ const DefaultPage = () => {
     changeData("toggles", data.toggles.map((toggle, indexToChange) => index === indexToChange ? {...toggle, [field]: value } : toggle ))
   const updateCondition = async (toggleIndex, conditions, index, value) =>
     updateToggle(toggleIndex, "conditions", conditions.map((condition, indexToChange) => index === indexToChange ? value : condition))
-  return (<>
-  
-    <table>
+  return (
+  <div style={{
+    display: 'flex',
+    flexDirection: 'column', 
+    alignItems: 'stretch',
+  }}>
+    <table class="table">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>State</th>
-                <th><div className="actions">
+                <th style={{
+                  width: '20vw'
+                }}>Name</th>
+                <th style={{
+                  width: '10vw'
+                }}>Type</th>
+                <th style={{
+                  width: '50vw'
+                }}>State</th>
+                <th style={{
+                  width: '15vw'
+                }}><div className="actions">
                     Actions
                     <button class="button button--primary" onClick={() => changeData("toggles", [...data.toggles, {
                       name: undefined,
@@ -60,7 +90,7 @@ const DefaultPage = () => {
             data.toggles.map( (toggle, index) =>(
               <tr key={`toggle_${index}`}>
                 <td >
-                  <input type="text" placeholder="Enter Name" value={ toggle.name } onChange={(event) => updateToggle(index, "name", event.target.value)} required/>
+                  <input type="text" placeholder="Name" value={ toggle.name } onChange={(event) => updateToggle(index, "name", event.target.value)} required/>
                 </td>
                 <td ><select
                         class="button button--secondary"
@@ -68,8 +98,8 @@ const DefaultPage = () => {
                         value={toggle.type}
                         required>
                     {
-                        TOGGLE_TYPES.map(type => 
-                            <option key={`toggleType${uuid()}`}>{type}</option>
+                        TOGGLE_TYPES.map((type, indexType) => 
+                            <option key={`toggleType_${toggle.name}_${index}_${indexType}`}>{type}</option>
                         )
                     }
                     </select>
@@ -79,19 +109,33 @@ const DefaultPage = () => {
                         checked={toggle.value}
                         onChange={(checked) => updateToggle(index,"value", checked)}/>) 
                     : toggle.conditions.map((condition, indexCondition) => (<>
-                          <input type="text" placeholder="Enter field" value={ condition.field } onChange={(event) => updateCondition(index, toggle.conditions, indexCondition, {...condition, field: event.target.value})} />
-                          <select
+                          <div style={{
+                            display: 'flex',
+                            flexDirection: 'column', 
+                            alignContent: 'stretch',
+                          }}>
+                            <div>
+                            <input style={{
+                            width: 100
+                          }} type="text" placeholder="Field" value={ condition.field } onChange={(event) => updateCondition(index, toggle.conditions, indexCondition, {...condition, field: event.target.value})} />
+                          <select style={{
+                            width: 170
+                          }} 
+                              class="button button--secondary"
                               onChange={event => updateCondition(index, toggle.conditions, indexCondition, {...condition, operation: event.target.value})}
                               value={condition.operation} 
                               required>
                           {
-                              OPERATIONS_TYPES.map(type => 
-                                  <option key={`OperationType${uuid()}`}>{type}</option>
+                              OPERATIONS_TYPES.map((type, indexType) => 
+                                  <option key={`OperationTypetoggleType_${toggle.name}_${index}_${indexType}`} value={type.value}>{type.name}</option>
                               )
                           }
                           </select>
-                          <input type="text" placeholder="Enter value" value={ condition.value } onChange={(event) => updateCondition(index, toggle.conditions, indexCondition, {...condition, value: event.target.value})} />
+                          <input  style={{
+                            width: 100
+                          }} type="text" placeholder="Value" value={ condition.value } onChange={(event) => updateCondition(index, toggle.conditions, indexCondition, {...condition, value: event.target.value})} />
                           <button class="button button--primary" onClick={() => updateToggle(index, "conditions", toggle.conditions.filter((_, indexDelete) => indexCondition !== indexDelete))}>Delete</button>
+                          </div></div>
                         </>))
                       }
                 </td>
@@ -101,7 +145,7 @@ const DefaultPage = () => {
                       {toggle.type === TOGGLE_TYPES[1] && <button class="button button--primary" onClick={() => updateToggle(index,"conditions", [...toggle.conditions, {
                         field: undefined,
                         value:undefined,
-                        operation: OPERATIONS_TYPES[0]
+                        operation: OPERATIONS_TYPES[0].value
                       }]) }>Add Condition</button> }
                       <button class="button button--primary" onClick={() => changeData("toggles", data.toggles.filter((_, indexDelete) => index !== indexDelete))}>Delete</button>
                     </div>
@@ -112,7 +156,7 @@ const DefaultPage = () => {
         </tbody>
     </table>
     <ReactJson src={processData} name={false} />
-  </>)
+  </div>)
 }
 
 export default function generator(){

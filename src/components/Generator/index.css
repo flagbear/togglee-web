@@ -1,0 +1,37 @@
+input[type=text],
+input[type=text]:focus {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--ifm-color-primary-light);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 15px;
+}
+
+ table.table { 
+    width: 90vw;
+    margin: 2rem; 
+}
+  
+.table th, .table td { 
+    text-align: left; 
+    padding: 0.25em;
+}
+  
+.table tr { 
+    border-bottom: 1px;
+}
+ 
+@media screen and (max-width: 800px) {
+    tr { 
+        display: flex; 
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0.5em 0;
+    }
+    td, th {
+        flex: 1 1 150px;
+    }
+}
+  
