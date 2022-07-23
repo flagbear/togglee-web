@@ -25,6 +25,13 @@ const OPERATIONS_TYPES = [{
   value: "le"
 }]
 
+const uuid = () => {
+  return 'xxxx-xxxx-xxx-xxxx'.replace(/[x]/g, (c) => {  
+    const r = Math.floor(Math.random() * 16);  
+    return r.toString(16);  
+  });
+}
+
 const DefaultPage = () => {
   const [data,setData] = useState({
       toggles:[]
@@ -81,6 +88,7 @@ const DefaultPage = () => {
                       type: TOGGLE_TYPES[0],
                       conditions: [],
                       value: false,
+                      key: uuid()
                     }])}>Add</button>
                 </div></th>
             </tr>
@@ -88,7 +96,7 @@ const DefaultPage = () => {
         <tbody>
           {
             data.toggles.map( (toggle, index) =>(
-              <tr key={`toggle_${index}`}>
+              <tr key={`toggle_${toggle.key}`}>
                 <td >
                   <input type="text" placeholder="Name" value={ toggle.name } onChange={(event) => updateToggle(index, "name", event.target.value)} required/>
                 </td>
@@ -99,7 +107,7 @@ const DefaultPage = () => {
                         required>
                     {
                         TOGGLE_TYPES.map((type, indexType) => 
-                            <option key={`toggleType_${toggle.name}_${index}_${indexType}`}>{type}</option>
+                            <option key={`toggleType_${toggle.key}`}>{type}</option>
                         )
                     }
                     </select>
@@ -127,7 +135,7 @@ const DefaultPage = () => {
                               required>
                           {
                               OPERATIONS_TYPES.map((type, indexType) => 
-                                  <option key={`OperationTypetoggleType_${toggle.name}_${index}_${indexType}`} value={type.value}>{type.name}</option>
+                                  <option key={`OperationTypetoggleType_${toggle.key}`} value={type.value}>{type.name}</option>
                               )
                           }
                           </select>
