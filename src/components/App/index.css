@@ -18,6 +18,12 @@ input[type=text]:focus {
     text-align: left; 
     padding: 0.25em;
 }
+
+.table button {
+    margin: 2px 5px;
+    padding: 5px 10px;
+}
+
   
 .table tr { 
     border-bottom: 1px;

@@ -27,7 +27,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  stylesheets: [
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  ],
   presets: [
     [
       'classic',
@@ -70,7 +72,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/generator', label: 'Generator', position: 'left'},
+          {to: '/app', label: 'App', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/togglee',

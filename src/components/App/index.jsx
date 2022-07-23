@@ -2,6 +2,7 @@ import * as React from "react"
 import { useState } from "react"
 import ReactJson from 'react-json-view'
 import Switch from "react-switch"
+
 import "./index.css";
 
 const TOGGLE_TYPES = ["release", "context"]
@@ -89,7 +90,9 @@ const DefaultPage = () => {
                       conditions: [],
                       value: false,
                       key: uuid()
-                    }])}>Add</button>
+                    }])}>
+                      <i class="fa fa-plus fa-lg"></i>
+                    </button>
                 </div></th>
             </tr>
         </thead>
@@ -142,7 +145,9 @@ const DefaultPage = () => {
                           <input  style={{
                             width: 100
                           }} type="text" placeholder="Value" value={ condition.value } onChange={(event) => updateCondition(index, toggle.conditions, indexCondition, {...condition, value: event.target.value})} />
-                          <button class="button button--primary" onClick={() => updateToggle(index, "conditions", toggle.conditions.filter((_, indexDelete) => indexCondition !== indexDelete))}>Delete</button>
+                          <button class="button button--primary" onClick={() => updateToggle(index, "conditions", toggle.conditions.filter((_, indexDelete) => indexCondition !== indexDelete))}>
+                            <i class="fa-regular fa-trash-can fa-lg"></i>
+                          </button>
                           </div></div>
                         </>))
                       }
@@ -154,8 +159,12 @@ const DefaultPage = () => {
                         field: undefined,
                         value:undefined,
                         operation: OPERATIONS_TYPES[0].value
-                      }]) }>Add Condition</button> }
-                      <button class="button button--primary" onClick={() => changeData("toggles", data.toggles.filter((_, indexDelete) => index !== indexDelete))}>Delete</button>
+                      }]) }>
+                      <i class="fa fa-plus fa-lg"></i>
+                      </button> }
+                      <button class="button button--primary" onClick={() => changeData("toggles", data.toggles.filter((_, indexDelete) => index !== indexDelete))}>
+                        <i class="fa-regular fa-trash-can fa-lg"></i>
+                      </button>
                     </div>
                 </td>
               </tr>
