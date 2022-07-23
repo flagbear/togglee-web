@@ -1,0 +1,42 @@
+import * as React from "react"
+import { useEffect, useState } from "react"
+import { Octokit } from "octokit";
+
+export const Retriever = ({changeData}: any) => {
+    const [fileUrl, setFileUrl] = useState('')
+    const [token, setToken] = useState('')
+    useEffect(() => {
+        setFileUrl(localStorage.getItem('fileUrl') || '')
+        setToken(localStorage.getItem('token') || '')
+      }, []);
+    const getData = async () => {
+        const gistRegex = /https:\/\/gist.github.com\/.+\/(.+)#file-(.+)/
+        if(!gistRegex.test(fileUrl)) return
+        const match = fileUrl.match(gistRegex) as string[];
+        const octokit = new Octokit({ auth: token });
+        const {
+        data: {files},
+        } = await octokit.rest.gists.get({
+            gist_id: match[1]
+        });
+        changeData('toggles',JSON.parse(files[match[2]]?.content).toggles);
+    }
+  return (<div style={{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    margin: '1rem 0'
+  }}>
+    <input type="text" style={{flexGrow: 4}} placeholder="File Url" value={ fileUrl } onChange={(event) => {
+        localStorage.setItem('fileUrl', event.target.value)
+        setFileUrl(event.target.value)
+    }} required/>
+    <input style={{ marginLeft: '10px', flexGrow: 2 }} type="password" placeholder="Personal Access Token" value={ token } onChange={(event) => {
+        localStorage.setItem('token', event.target.value)
+        setToken(event.target.value)
+    }} required/>
+    <button style={{ marginLeft: '10px' }} className="button button--primary" onClick={getData}>
+    <i className="fa fa-download"></i>
+    </button>
+  </div>)
+}

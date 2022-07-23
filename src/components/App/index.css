@@ -1,5 +1,5 @@
-input[type=text],
-input[type=text]:focus {
+input,
+input:focus {
     border-style: solid;
     border-width: 1px;
     border-color: var(--ifm-color-primary-light);
