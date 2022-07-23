@@ -45,7 +45,7 @@ const DefaultPage = () => {
     setData(result)
     setProcessData({
       toggles: result.toggles
-      .map(toggle => {
+      .map((toggle: any) => {
 
         const mappedToggle = {
           name: toggle.name,
@@ -58,12 +58,12 @@ const DefaultPage = () => {
         toggle.name 
         && (
           toggle.type ===TOGGLE_TYPES[0] || toggle.conditions.length > 0))
-    })
+    } as any)
   }
   const updateToggle = async (index, field, value) =>
-    changeData("toggles", data.toggles.map((toggle, indexToChange) => index === indexToChange ? {...toggle, [field]: value } : toggle ))
+    changeData("toggles", data.toggles.map((toggle: any, indexToChange: number) => index === indexToChange ? {...toggle, [field]: value } : toggle ))
   const updateCondition = async (toggleIndex, conditions, index, value) =>
-    updateToggle(toggleIndex, "conditions", conditions.map((condition, indexToChange) => index === indexToChange ? value : condition))
+    updateToggle(toggleIndex, "conditions", conditions.map((condition: any, indexToChange: any) => index === indexToChange ? value : condition))
   return (
   <div style={{
     display: 'flex',
@@ -71,7 +71,7 @@ const DefaultPage = () => {
     alignItems: 'stretch',
     padding: '1rem 3rem'
   }}>
-    <table class="table">
+    <table className="table">
         <thead>
             <tr>
                 <th style={{
@@ -87,27 +87,27 @@ const DefaultPage = () => {
                   width: '15vw'
                 }}><div className="actions">
                     Actions
-                    <button class="button button--primary" onClick={() => changeData("toggles", [...data.toggles, {
+                    <button className="button button--primary" onClick={() => changeData("toggles", [...data.toggles, {
                       name: undefined,
                       type: TOGGLE_TYPES[0],
                       conditions: [],
                       value: false,
                       key: uuid()
                     }])}>
-                      <i class="fa fa-plus fa-lg"></i>
+                      <i className="fa fa-plus fa-lg"></i>
                     </button>
                 </div></th>
             </tr>
         </thead>
         <tbody>
           {
-            data.toggles.map( (toggle, index) =>(
+            data.toggles.map( (toggle: any, index: number) =>(
               <tr key={`toggle_${toggle.key}`}>
                 <td >
                   <input type="text" placeholder="Name" value={ toggle.name } onChange={(event) => updateToggle(index, "name", event.target.value)} required/>
                 </td>
                 <td ><select
-                        class="button button--secondary"
+                        className="button button--secondary"
                         onChange={event => updateToggle(index,"type", event.target.value)}
                         value={toggle.type}
                         required>
@@ -135,7 +135,7 @@ const DefaultPage = () => {
                           <select style={{
                             width: 170
                           }} 
-                              class="button button--secondary"
+                              className="button button--secondary"
                               onChange={event => updateCondition(index, toggle.conditions, indexCondition, {...condition, operation: event.target.value})}
                               value={condition.operation} 
                               required>
@@ -148,8 +148,8 @@ const DefaultPage = () => {
                           <input  style={{
                             width: 100
                           }} type="text" placeholder="Value" value={ condition.value } onChange={(event) => updateCondition(index, toggle.conditions, indexCondition, {...condition, value: event.target.value})} />
-                          <button class="button button--primary" onClick={() => updateToggle(index, "conditions", toggle.conditions.filter((_, indexDelete) => indexCondition !== indexDelete))}>
-                            <i class="fa-regular fa-trash-can fa-lg"></i>
+                          <button className="button button--primary" onClick={() => updateToggle(index, "conditions", toggle.conditions.filter((_, indexDelete) => indexCondition !== indexDelete))}>
+                            <i className="fa-regular fa-trash-can fa-lg"></i>
                           </button>
                           </div></div>
                         </>))
@@ -158,15 +158,15 @@ const DefaultPage = () => {
                 <td>
                     <div className="actions">
 
-                      {toggle.type === TOGGLE_TYPES[1] && <button class="button button--primary" onClick={() => updateToggle(index,"conditions", [...toggle.conditions, {
+                      {toggle.type === TOGGLE_TYPES[1] && <button className="button button--primary" onClick={() => updateToggle(index,"conditions", [...toggle.conditions, {
                         field: undefined,
                         value:undefined,
                         operation: OPERATIONS_TYPES[0].value
                       }]) }>
-                      <i class="fa fa-plus fa-lg"></i>
+                      <i className="fa fa-plus fa-lg"></i>
                       </button> }
-                      <button class="button button--primary" onClick={() => changeData("toggles", data.toggles.filter((_, indexDelete) => index !== indexDelete))}>
-                        <i class="fa-regular fa-trash-can fa-lg"></i>
+                      <button className="button button--primary" onClick={() => changeData("toggles", data.toggles.filter((_, indexDelete) => index !== indexDelete))}>
+                        <i className="fa-regular fa-trash-can fa-lg"></i>
                       </button>
                     </div>
                 </td>
@@ -175,7 +175,7 @@ const DefaultPage = () => {
           }
         </tbody>
     </table>
-    <ReactJson src={processData} name={false} theme={colorMode === 'dark'? 'ashes' : 'rjv-default'} />
+    <ReactJson src={processData as any} name={false} theme={colorMode === 'dark'? 'ashes' : 'rjv-default'} />
   </div>)
 }
 
