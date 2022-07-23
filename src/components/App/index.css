@@ -10,10 +10,9 @@ input[type=text]:focus {
 }
 
  table.table { 
-    width: 90vw;
-    margin: 2rem; 
-}
-  
+    width: 100%;
+} 
+
 .table th, .table td { 
     text-align: left; 
     padding: 0.25em;

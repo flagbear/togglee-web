@@ -2,6 +2,7 @@ import * as React from "react"
 import { useState } from "react"
 import ReactJson from 'react-json-view'
 import Switch from "react-switch"
+import {useColorMode} from '@docusaurus/theme-common';
 
 import "./index.css";
 
@@ -34,6 +35,7 @@ const uuid = () => {
 }
 
 const DefaultPage = () => {
+  const {colorMode} = useColorMode();
   const [data,setData] = useState({
       toggles:[]
   });
@@ -67,6 +69,7 @@ const DefaultPage = () => {
     display: 'flex',
     flexDirection: 'column', 
     alignItems: 'stretch',
+    padding: '1rem 3rem'
   }}>
     <table class="table">
         <thead>
@@ -172,7 +175,7 @@ const DefaultPage = () => {
           }
         </tbody>
     </table>
-    <ReactJson src={processData} name={false} />
+    <ReactJson src={processData} name={false} theme={colorMode === 'dark'? 'ashes' : 'rjv-default'} />
   </div>)
 }
 
