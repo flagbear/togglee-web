@@ -46,7 +46,7 @@ const App = () => {
     alignItems: 'stretch',
     padding: '1rem 3rem'
   }}>
-    <Retriever changeData={changeData} />
+    <Retriever data={processData} changeData={changeData} />
     <ToggleTable data={data} changeData={changeData}/>
     <ReactJson src={processData as any} name={false} theme={colorMode === 'dark'? 'ashes' : 'rjv-default'} />
   </div>)

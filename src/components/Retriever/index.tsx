@@ -2,13 +2,35 @@ import * as React from "react"
 import { useEffect, useState } from "react"
 import { Octokit } from "octokit";
 
-export const Retriever = ({changeData}: any) => {
+export const Retriever = ({changeData, data}: any) => {
     const [fileUrl, setFileUrl] = useState('')
     const [token, setToken] = useState('')
     useEffect(() => {
         setFileUrl(localStorage.getItem('fileUrl') || '')
         setToken(localStorage.getItem('token') || '')
       }, []);
+    const setData= async () => {
+        const gistRegex = /https:\/\/gist.github.com\/.+\/(.+)#file-(.+)/
+        if(!gistRegex.test(fileUrl)) return
+        const [_, gist_id, fileName] = fileUrl.match(gistRegex) as string[];
+        const octokit = new Octokit({ auth: token });
+        console.log({
+            gist_id,
+            files:{
+                [fileName]: {
+                    content: JSON.stringify(data)
+                }
+            }
+        })
+        await octokit.rest.gists.update({
+            gist_id,
+            files:{
+                [fileName]: {
+                    content: JSON.stringify(data, undefined, 4)
+                }
+            }
+        });
+    }
     const getData = async () => {
         const gistRegex = /https:\/\/gist.github.com\/.+\/(.+)#file-(.+)/
         if(!gistRegex.test(fileUrl)) return
@@ -37,6 +59,9 @@ export const Retriever = ({changeData}: any) => {
     }} required/>
     <button style={{ marginLeft: '10px' }} className="button button--primary" onClick={getData}>
     <i className="fa fa-download"></i>
+    </button>
+    <button style={{ marginLeft: '10px' }} className="button button--primary" onClick={setData}>
+    <i className="fa fa-upload"></i>
     </button>
   </div>)
 }
