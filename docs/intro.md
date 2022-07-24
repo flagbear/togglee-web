@@ -8,7 +8,7 @@ Welcome to the Togglee user guide! This guide shows you how to get started creat
 
 ## What is Togglee?
 
-Togglee is a set of libraries that enable the use of feature toggles in different development languages with one set of toggle definition. Its different to other technologies as it does not depend on a service to serve this content but actually relies in plain files server over the internet or your servers through a URL (for example gist).
+Togglee is a set of libraries that enable the use of feature toggles in different development languages with one set of toggle definition. It's different to other technologies as it does not depend on a service to serve this content but actually relies on plain text files server over the internet or your servers through a URL (ex. gist).
 
 
 ## Is Togglee for me?

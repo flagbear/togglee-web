@@ -41,7 +41,7 @@ An example implementation using js for the previous toggle is:
         if (subject.isEnabled("myToggle"))
             console.log("do stuff")
         else
-            console.log("dont do stuff")
+            console.log("don't do stuff")
     }, 10000);
 ```
 

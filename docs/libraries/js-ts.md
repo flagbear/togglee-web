@@ -45,15 +45,15 @@ setInterval(() => {
     if (subject.isEnabled("prop"))
         console.log("do stuff")
     else
-        console.log("dont do stuff")
+        console.log("don't do stuff")
     if (subject.isEnabled("prop3", {"username": "user1"}))
         console.log("do stuff for user 1")
     else
-        console.log("dont do stuff for user 1")
+        console.log("don't do stuff for user 1")
     if (subject.isEnabled("prop3", {"username": "user2"}))
         console.log("do stuff for user 2")
     else
-        console.log("dont do stuff for user 2")
+        console.log("don't do stuff for user 2")
         
     console.log("-----------")
 }, 10000);

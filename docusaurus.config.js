@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Togglee',
-  tagline: 'Real-time feature flags without the need of a server',
+  tagline: 'Real-time feature flags without a server',
   url: 'https://togglee.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',

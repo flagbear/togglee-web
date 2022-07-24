@@ -24,5 +24,5 @@ subject = Togglee(url, refresh_rate_seconds, default_values)
 if subject.is_enabled("prop"):
     print("do stuff")
 else:
-    print("dont do stuff")
+    print("don't do stuff")
 ```

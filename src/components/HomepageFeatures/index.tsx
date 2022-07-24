@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_tree.svg').default,
     description: (
       <>
-        This is real time so you dont need to go through your code release cicle to change the state of your application.
+        This is real time, so you don't need to go through your code release cycle to change the state of your application.
       </>
     ),
   },
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_mountain.svg').default,
     description: (
       <>
-        We do this to help the community so Togglee is free as it does not require a service.
+        We do this to help the community, so Togglee is free as it does not require a service.
       </>
     ),
   },
