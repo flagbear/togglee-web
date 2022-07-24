@@ -42,21 +42,25 @@ export const Retriever = ({changeData, data}: any) => {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    margin: '1rem 0'
+    margin: '1rem 0', 
+    flexWrap: 'wrap',
+    width: '100%'
   }}>
-    <input type="text" style={{flexGrow: 4}} placeholder="File Url" value={ fileUrl } onChange={(event) => {
+    <input type="text" style={{margin: '5px', flexGrow: 4}} placeholder="File Url" value={ fileUrl } onChange={(event) => {
         localStorage.setItem('fileUrl', event.target.value)
         setFileUrl(event.target.value)
     }} required/>
-    <input style={{ marginLeft: '10px', flexGrow: 2 }} type="password" placeholder="Personal Access Token" value={ token } onChange={(event) => {
+    <input style={{ margin: '5px', flexGrow: 2 }} type="password" placeholder="Personal Access Token" value={ token } onChange={(event) => {
         localStorage.setItem('token', event.target.value)
         setToken(event.target.value)
     }} required/>
-    <button style={{ marginLeft: '10px' }} className="button button--primary" onClick={getData}>
-    <i className="fa fa-download"></i>
-    </button>
-    <button style={{ marginLeft: '10px' }} className="button button--primary" onClick={setData}>
-    <i className="fa fa-upload"></i>
-    </button>
+    <div style={{ margin: '5px' }}>
+        <button className="button button--primary" onClick={getData}>
+        <i className="fa fa-download"></i>
+        </button>
+        <button style={{ marginLeft: '10px' }} className="button button--primary" onClick={setData}>
+        <i className="fa fa-upload"></i>
+        </button>
+    </div>
   </div>)
 }
