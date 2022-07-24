@@ -1,5 +1,6 @@
 import * as React from "react"
 import Switch from "react-switch"
+import { uuid } from "@site/src/helpers/uuid";
 import "./index.css";
 
 export const TOGGLE_TYPES = ["release", "context"]
@@ -22,13 +23,6 @@ const OPERATIONS_TYPES = [{
   name: "lower equal",
   value: "le"
 }]
-
-const uuid = () => {
-  return 'xxxx-xxxx-xxx-xxxx'.replace(/[x]/g, (c) => {  
-    const r = Math.floor(Math.random() * 16);  
-    return r.toString(16);  
-  });
-}
 
 export const ToggleTable = ({data, changeData}: any) => {
   const updateToggle = async (index, field, value) =>
@@ -78,7 +72,7 @@ export const ToggleTable = ({data, changeData}: any) => {
                         required>
                     {
                         TOGGLE_TYPES.map((type, indexType) => 
-                            <option key={`toggleType_${toggle.key}`}>{type}</option>
+                            <option key={`toggleType_${toggle.key}_${indexType}`}>{type}</option>
                         )
                     }
                     </select>
@@ -107,7 +101,7 @@ export const ToggleTable = ({data, changeData}: any) => {
                               required>
                           {
                               OPERATIONS_TYPES.map((type, indexType) => 
-                                  <option key={`OperationTypetoggleType_${toggle.key}`} value={type.value}>{type.name}</option>
+                                  <option key={`OperationTypetoggleType_${toggle.key}_${indexType}`} value={type.value}>{type.name}</option>
                               )
                           }
                           </select>

@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useEffect, useState } from "react"
-import { Octokit } from "octokit";
+import { Octokit } from "octokit"
+import { uuid } from "@site/src/helpers/uuid"
 
 export const Retriever = ({changeData, data}: any) => {
     const [fileUrl, setFileUrl] = useState('')
@@ -14,14 +15,6 @@ export const Retriever = ({changeData, data}: any) => {
         if(!gistRegex.test(fileUrl)) return
         const [_, gist_id, fileName] = fileUrl.match(gistRegex) as string[];
         const octokit = new Octokit({ auth: token });
-        console.log({
-            gist_id,
-            files:{
-                [fileName]: {
-                    content: JSON.stringify(data)
-                }
-            }
-        })
         await octokit.rest.gists.update({
             gist_id,
             files:{
@@ -41,7 +34,9 @@ export const Retriever = ({changeData, data}: any) => {
         } = await octokit.rest.gists.get({
             gist_id: match[1]
         });
-        changeData('toggles',JSON.parse(files[match[2]]?.content).toggles);
+        const content: any = JSON.parse(files[match[2]]?.content).toggles;
+        const mappedToggles = content.map((toggle: any) => ({...toggle, key: uuid()}));
+        changeData('toggles',mappedToggles);
     }
   return (<div style={{
     display: 'flex',
