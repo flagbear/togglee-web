@@ -85,6 +85,7 @@ export const ToggleTable = ({data, changeData}: any) => {
                 </td>
                 <td>{toggle.type === TOGGLE_TYPES[0] 
                     ? (<Switch
+                        className="switch"
                         checked={toggle.value}
                         onChange={(checked) => updateToggle(index,"value", checked)}/>) 
                     : toggle.conditions.map((condition, indexCondition) => (<>
@@ -95,10 +96,10 @@ export const ToggleTable = ({data, changeData}: any) => {
                           }}>
                             <div>
                             <input style={{
-                            width: 100
+                            width: 150
                           }} type="text" placeholder="Field" value={ condition.field } onChange={(event) => updateCondition(index, toggle.conditions, indexCondition, {...condition, field: event.target.value})} />
                           <select style={{
-                            width: 170
+                            width: 155
                           }} 
                               className="button button--secondary"
                               onChange={event => updateCondition(index, toggle.conditions, indexCondition, {...condition, operation: event.target.value})}
@@ -111,7 +112,7 @@ export const ToggleTable = ({data, changeData}: any) => {
                           }
                           </select>
                           <input  style={{
-                            width: 100
+                            width: 150
                           }} type="text" placeholder="Value" value={ condition.value } onChange={(event) => updateCondition(index, toggle.conditions, indexCondition, {...condition, value: event.target.value})} />
                           <button className="button button--primary" onClick={() => updateToggle(index, "conditions", toggle.conditions.filter((_, indexDelete) => indexCondition !== indexDelete))}>
                             <i className="fa-regular fa-trash-can fa-lg"></i>

@@ -8,13 +8,19 @@ table.table {
 }
 
 .table button {
-    margin: 2px 5px;
     padding: 5px 10px;
 }
 
   
 .table tr { 
     border-bottom: 1px;
+}
+
+.table input, 
+.table select, 
+.table button, 
+.table .switch {
+    margin: 2px 5px;
 }
  
 @media screen and (max-width: 800px) {
