@@ -15,7 +15,6 @@ const App = () => {
   const [processData,setProcessData] = useState();
   useEffect(() => {
     const savedData = localStorage.getItem('appData') 
-    console.log(savedData)
     if(savedData)
       changeData('toggles', JSON.parse(savedData).toggles)
   }, []);
