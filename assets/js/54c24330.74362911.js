@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[647],{9194:e=>{e.exports=JSON.parse('{"title":"Libraries","slug":"/category/libraries","permalink":"/docs/category/libraries","navigation":{"previous":{"title":"Types of Toggles","permalink":"/docs/types-of-toggles"},"next":{"title":"Typescript & Javscript","permalink":"/docs/libraries/js-ts"}}}')}}]);
