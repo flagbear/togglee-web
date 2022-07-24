@@ -1,6 +1,6 @@
 {
-    "label": "Libraries By Language",
-    "position": 4,
+    "label": "Libraries",
+    "position": 5,
     "link": {
         "type": "generated-index"
     }
