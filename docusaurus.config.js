@@ -126,6 +126,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: 'OXHTKG3773',
+        apiKey: '5b96eac201fd8f34aa3c3ec6d8291752',
+        indexName: 'togglee'
+      }
     }),
 };
 
