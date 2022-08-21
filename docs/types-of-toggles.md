@@ -1,14 +1,15 @@
 ---
 sidebar_position: 3
+
 ---
+# Types of Toggles
 
-# Types of Toggles 
-
-Togglee supports the next types of toggles: 
+Togglee supports the next types of toggles:
 
 ## Release
 
 Simple true/false logical path definition.
+
 ```js
 {
     "type": "release",
@@ -16,9 +17,11 @@ Simple true/false logical path definition.
     "value": true
 }
 ```
+
 ## Context
 
-Allows complex logic to decide the outcome of the logical path (example traffic, users, resources available). 
+Allows complex logic to decide the outcome of the logical path (example traffic, users, resources available).
+
 ```js
 {
     "type": "context",
@@ -32,10 +35,12 @@ Allows complex logic to decide the outcome of the logical path (example traffic,
     ]
 }
 ```
+
 available operations are:
+
 * 'eq': equal (===)
 * 'ne': not equal (!==)
 * 'gt': greater than (>)
 * 'ge': greater equal (>=)
 * 'lt': lesser than (<)
-* 'le': lesser qqual (<=)
+* 'le': lesser equal (<=)
