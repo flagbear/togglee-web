@@ -1,15 +1,15 @@
 ---
 sidebar_position: 2
+
 ---
+# Quick Start
 
-# Quick Start 
+For using Togglee, you will need:
 
-For using togglee you will need:
-- A toggle file hosted in an accesible server throught http/https (ex. gist).
-- An application using one of the supported languages libraries (ex. js).
+* A toggle file hosted in an accessible server through HTTP/HTTPS (ex. gist).
+* An application using one of the supported languages libraries (ex. js).
 
-The toggle file needs to be defined as valid json object similar 
-Simple true/false logical path definition.
+The toggle file needs to be defined as a valid JSON object, similar to Simple true/false logical path definition.
 
 ```js
 {
@@ -23,9 +23,9 @@ Simple true/false logical path definition.
 }
 ```
 
-the supported formats for the toggle can be found in the section (Toggle types)[docs/toggle-types]. 
+The supported formats for the toggle can be found in the section (Toggle types)\[docs/toggle-types\].
 
-An example implementation using js for the previous toggle is:
+An example implementation using JS for the previous toggle is:
 
 ```js
     import pkg from 'togglee';
@@ -45,4 +45,4 @@ An example implementation using js for the previous toggle is:
     }, 10000);
 ```
 
-Please reffer to each language for specific capabilities.
+Please refer to each language for specific capabilities.
