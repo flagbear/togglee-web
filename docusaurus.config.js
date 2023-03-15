@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Togglee',
   tagline: 'Real-time feature flags without a server',
-  url: 'https://togglee.com',
+  url: 'https://www.togglee.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
