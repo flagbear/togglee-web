@@ -1,2 +1,3 @@
 User-agent: *
+Disallow:
 Sitemap: https://www.togglee.com/sitemap.xml
