@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-
 ---
+
 # Types of Toggles
 
 Togglee supports the next types of toggles:
@@ -38,9 +38,9 @@ Allows complex logic to decide the outcome of the logical path (example traffic,
 
 available operations are:
 
-* 'eq': equal (===)
-* 'ne': not equal (!==)
-* 'gt': greater than (>)
-* 'ge': greater equal (>=)
-* 'lt': lesser than (<)
-* 'le': lesser equal (<=)
+* 'eq': equal
+* 'ne': not equal
+* 'gt': greater than
+* 'ge': greater equal
+* 'lt': lesser than
+* 'le': lesser equal

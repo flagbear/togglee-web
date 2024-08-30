@@ -11,28 +11,28 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_computer.svg').default,
-    description: (
-      <>
-        No coding needed, Anyone in your project should be able to edit the state of toggles.
-      </>
-    ),
-  },
-  {
-    title: 'Lightning Speed',
-    Svg: require('@site/static/img/undraw_tree.svg').default,
-    description: (
-      <>
-        This is real time, so you don't need to go through your code release cycle to change the state of your application.
-      </>
-    ),
-  },
-  {
-    title: 'Community Free',
     Svg: require('@site/static/img/undraw_mountain.svg').default,
     description: (
       <>
-        We do this to help the community, so Togglee is free as it does not require a service.
+        Togglee was designed from the ground up to be easily installed and used to get you up and running with your favorite CI system.
+      </>
+    ),
+  },
+  {
+    title: 'Focus on What Matters',
+    Svg: require('@site/static/img/undraw_tree.svg').default,
+    description: (
+      <>
+        Togglee lets you focus on your day-to-day work, and we will let you know if anything important happens.
+      </>
+    ),
+  },
+  {
+    title: 'Powered by Electron',
+    Svg: require('@site/static/img/undraw_computer.svg').default,
+    description: (
+      <>
+        Togglee is multiplatform and can be used in any operating system.
       </>
     ),
   },
