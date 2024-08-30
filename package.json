@@ -19,6 +19,7 @@
     "@docusaurus/preset-classic": "3.3.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@loadable/component": "^5.16.4",
     "@mdx-js/react": "^3.0.0",
     "@mui/icons-material": "^5.16.0",
     "@mui/lab": "^5.0.0-alpha.171",
@@ -28,10 +29,13 @@
     "clsx": "^2.0.0",
     "configcat-react": "^4.6.0",
     "dotenv": "^16.4.5",
+    "octokit": "^4.0.2",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-infinite-logo-slider": "^1.0.13",
+    "react-json-view": "^1.21.3",
+    "react-switch": "^7.0.0",
     "react-type-animation": "^3.2.0"
   },
   "devDependencies": {

@@ -72,6 +72,7 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
+        {to: '/app', label: 'App', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/togglee',
