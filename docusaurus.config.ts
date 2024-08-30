@@ -27,7 +27,9 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+  stylesheets: [
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  ],
   presets: [
     [
       'classic',
