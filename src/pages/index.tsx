@@ -84,7 +84,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Native OS Build & Monitoring Radiator">
+      description="Real-time feature flags app enablement made serviceless">
       <HomepageHeader />
       <main>
         <StraightforwardView />
