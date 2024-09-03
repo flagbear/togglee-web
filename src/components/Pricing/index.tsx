@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import Spacer from '@site/src/components/Spacer';
-import { Box, Button, Card, CardActions, CardContent, CardHeader, Divider, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Card, CardActions, CardContent, CardHeader, Divider, Stack, Typography, useMediaQuery, useTheme } from '@mui/material';
 
 const PricingCard = ({name, price, features, button}: any) => {
   return (
