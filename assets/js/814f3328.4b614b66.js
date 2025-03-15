@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkflagbear_website=self.webpackChunkflagbear_website||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"First Alpha Release","permalink":"/blog/first-alpha-release","unlisted":false}]}')}}]);

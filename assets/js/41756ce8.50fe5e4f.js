@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkflagbear_website=self.webpackChunkflagbear_website||[]).push([[616],{5205:e=>{e.exports=JSON.parse('{"tags":[{"label":"release","permalink":"/blog/tags/release","count":1}]}')}}]);

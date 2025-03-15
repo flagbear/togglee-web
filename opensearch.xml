@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-  <ShortName>Togglee</ShortName>
-  <Description>Search Togglee</Description>
+  <ShortName>flagbear</ShortName>
+  <Description>Search flagbear</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://www.togglee.com/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://www.togglee.com/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://www.togglee.com/opensearch.xml" />
-  <moz:SearchForm>https://www.togglee.com/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://www.flagbear.dev/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://www.flagbear.dev/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://www.flagbear.dev/opensearch.xml" />
+  <moz:SearchForm>https://www.flagbear.dev/</moz:SearchForm>
 </OpenSearchDescription>
