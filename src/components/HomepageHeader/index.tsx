@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Spacer from '@site/src/components/Spacer';
 import styles from './styles.module.css';
-import flagbearAnimated from '@site/static/img/flagbear.svg';
+import FlagbearAnimated from '@site/static/img/flagbear.svg';
 import { TypeAnimation } from "react-type-animation";
 
 const HeaderView: React.FC = () => {
@@ -30,7 +30,7 @@ const HeaderView: React.FC = () => {
         <Spacer height={20} />
         <p className={styles.DescriptionText}>{siteConfig.tagline}</p>
       </div>
-      <flagbearAnimated className={styles.flagbearImage}/>
+      <FlagbearAnimated className={styles.flagbearImage}/>
     </div>
   );
 };
