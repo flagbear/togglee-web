@@ -23,7 +23,7 @@ const TWEETS: TweetItem[] = [
     date: 'Oct 26, 2021',
     content: (
       <>
-      🤩 Just discovered the power of feature flags with @Togglee. No more worrying about breaking changes or regression bugs! This simple trick will change your dev life forever 😊 #togglee
+      🤩 Just discovered the power of feature flags with @flagbear. No more worrying about breaking changes or regression bugs! This simple trick will change your dev life forever 😊 #flagbear
       </>
     ),
     showOnHomepage: true,
@@ -36,7 +36,7 @@ const TWEETS: TweetItem[] = [
     date: 'Feb 21, 2024',
     content: (
       <>
-        Want to know how we ship high-quality products faster? 🤔 It's all about using @Togglee's feature flags! Our team loves the flexibility and control they provide. #togglee
+        Want to know how we ship high-quality products faster? 🤔 It's all about using @flagbear's feature flags! Our team loves the flexibility and control they provide. #flagbear
       </>
     ),
     showOnHomepage: true,
@@ -49,7 +49,7 @@ const TWEETS: TweetItem[] = [
     date: 'May 17, 2024',
     content: (
       <>
-        🚨 Attention all developers: don't let deployment stress get you down! 🙅‍♂️ Use @Togglee's real-time feature flagging system to manage features like a pro. Try it out now and join the ranks of happy, stress-free devs 👍
+        🚨 Attention all developers: don't let deployment stress get you down! 🙅‍♂️ Use @flagbear's real-time feature flagging system to manage features like a pro. Try it out now and join the ranks of happy, stress-free devs 👍
       </>
     ),
     showOnHomepage: true,
@@ -62,7 +62,7 @@ const TWEETS: TweetItem[] = [
     date: 'May 4, 2024',
     content: (
       <>
-        🔥 Just fixed an embarrassing bug thanks to @Togglee's feature flags. Now I can roll out changes with confidence and without worrying about breaking the app 👍 #togglee #devwin
+        🔥 Just fixed an embarrassing bug thanks to @flagbear's feature flags. Now I can roll out changes with confidence and without worrying about breaking the app 👍 #flagbear #devwin
       </>
     ),
     showOnHomepage: true,
@@ -75,7 +75,7 @@ const TWEETS: TweetItem[] = [
     date: 'May 28, 2024',
     content: (
       <>
-        Just used @Togglee to flag a problematic feature that was slowing down my app. The real-time updates saved the day 💯 Now I can focus on shipping quality code, not debugging issues 👍 #togglee #devlife
+        Just used @flagbear to flag a problematic feature that was slowing down my app. The real-time updates saved the day 💯 Now I can focus on shipping quality code, not debugging issues 👍 #flagbear #devlife
       </>
     ),
     showOnHomepage: true,
@@ -88,7 +88,7 @@ const TWEETS: TweetItem[] = [
     date: 'May 17, 2024',
     content: (
       <>
-       🚀 Just upgraded my workflow with @Togglee's real-time feature flagging system! 🤩 Now I can manage features in gist with ease. No more deployment headaches 👍 #togglee #devops
+       🚀 Just upgraded my workflow with @flagbear's real-time feature flagging system! 🤩 Now I can manage features in gist with ease. No more deployment headaches 👍 #flagbear #devops
       </>
     ),
     showOnHomepage: true,

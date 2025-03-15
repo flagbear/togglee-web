@@ -6,12 +6,12 @@ sidebar_position: 1
 
 ## Installation
 
-add it to your project using `npm install togglee --save` or `yarn add togglee`
+add it to your project using `npm install flagbear --save` or `yarn add flagbear`
 
 ## Usage
 
 ```js
-const { Togglee } = require("togglee")
+const { flagbear } = require("flagbear")
 
 const url = "https://gist.githubusercontent.com/kanekotic/c469f99bef5a5c0634b4a94a4acd6546/raw/toggles"
 const refreshRateSeconds = 5
@@ -39,7 +39,7 @@ const defaultValues = [
     }
 ]
 
-const subject = new Togglee(url, refreshRateSeconds, defaultValues)
+const subject = new flagbear(url, refreshRateSeconds, defaultValues)
 
 setInterval(() => {
     if (subject.isEnabled("prop"))

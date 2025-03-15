@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_mountain.svg').default,
     description: (
       <>
-        Togglee was designed from the ground up to be easily installed and used to get you up and running with your favorite CI system.
+        flagbear was designed from the ground up to be easily installed and used to get you up and running with your favorite CI system.
       </>
     ),
   },
@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_tree.svg').default,
     description: (
       <>
-        Togglee lets you focus on your day-to-day work, and we will let you know if anything important happens.
+        flagbear lets you focus on your day-to-day work, and we will let you know if anything important happens.
       </>
     ),
   },
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_computer.svg').default,
     description: (
       <>
-        Togglee is multiplatform and can be used in any operating system.
+        flagbear is multiplatform and can be used in any operating system.
       </>
     ),
   },

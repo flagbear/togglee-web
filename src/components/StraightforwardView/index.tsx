@@ -8,7 +8,7 @@ const StraightforwardView: React.FC = () => {
     <div className={styles.Container} >
       <div className={styles.Content} >
         <div className={styles.HeaderContainer} data-aos="flip-left" data-aos-duration="1000">
-          <h3 className={styles.Tagline}>Why should you use Togglee?</h3>
+          <h3 className={styles.Tagline}>Why should you use flagbear?</h3>
           <h1 className={styles.Title}>Reduce Cost</h1>
           <Spacer height={20} />
           <p className={styles.Description}>

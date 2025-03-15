@@ -10,9 +10,9 @@ else //if environment is undefined - using swizzle
 
 const config: Config = {
 
-  title: 'Togglee',
+  title: 'flagbear',
   tagline: 'Real-time feature flags app enablement made serviceless',
-  url: 'https://www.togglee.com',
+  url: 'https://www.flagbear.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -21,8 +21,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'togglee', // Usually your GitHub org/user name.
-  projectName: 'togglee-web', // Usually your repo name.
+  organizationName: 'flagbear', // Usually your GitHub org/user name.
+  projectName: 'flagbear-web', // Usually your repo name.
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -39,14 +39,14 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/togglee/togglee-web/tree/main/',
+            'https://github.com/flagbear/flagbear-web/tree/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/togglee/togglee-web/tree/main/',
+            'https://github.com/flagbear/flagbear-web/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -62,9 +62,9 @@ const config: Config = {
   themeConfig: {
     image: 'img/social-card.png',
     navbar: {
-      title: 'Togglee',
+      title: 'flagbear',
       logo: {
-        alt: 'Togglee',
+        alt: 'flagbear',
         src: 'img/logo.svg',
       },
       items: [
@@ -77,7 +77,7 @@ const config: Config = {
         {to: '/app', label: 'App', position: 'left'},
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/togglee',
+          href: 'https://github.com/flagbear',
           label: 'GitHub',
           position: 'right',
         },
@@ -100,7 +100,7 @@ const config: Config = {
           items: [
             {
               label: 'Twitter',
-              href: 'https://twitter.com/togglee',
+              href: 'https://twitter.com/flagbear',
             },
           ],
         },
@@ -113,7 +113,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/togglee',
+              href: 'https://github.com/flagbear',
             },
             {
               label: 'Privacy Policy',
@@ -135,7 +135,7 @@ const config: Config = {
     algolia: {
       appId: 'OXHTKG3773',
       apiKey: '5b96eac201fd8f34aa3c3ec6d8291752',
-      indexName: 'togglee'
+      indexName: 'flagbear'
     }
   } satisfies Preset.ThemeConfig,
   scripts: [

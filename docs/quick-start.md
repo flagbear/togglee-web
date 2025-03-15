@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 # Quick Start
 
-For using Togglee, you will need:
+For using flagbear, you will need:
 
 * A toggle file hosted in an accessible server through HTTP/HTTPS (ex. gist).
 * An application using one of the supported languages libraries (ex. js).
@@ -28,13 +28,13 @@ The supported formats for the toggle can be found in the section (Toggle types)\
 An example implementation using JS for the previous toggle is:
 
 ```js
-    import pkg from 'togglee';
-    const {Togglee} = pkg;
+    import pkg from 'flagbear';
+    const {flagbear} = pkg;
 
     const url = "https://gist.githubusercontent.com/kanekotic/c469f99bef5a5c0634b4a94a4acd6546/raw/toggles"
     const refreshRateSeconds = 5
     const defaultValues = []
-    const subject = new Togglee(url, refreshRateSeconds, defaultValues)
+    const subject = new flagbear(url, refreshRateSeconds, defaultValues)
 
 
     setInterval(() => {

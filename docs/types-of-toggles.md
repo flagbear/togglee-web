@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Types of Toggles
 
-Togglee supports the next types of toggles:
+flagbear supports the next types of toggles:
 
 ## Release
 
